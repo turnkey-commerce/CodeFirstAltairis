@@ -1,0 +1,128 @@
+PM> Install-Package Altairis.Web.Security
+Successfully installed 'Altairis.Web.Security 2.4.0'
+Successfully added 'Altairis.Web.Security 2.4.0' to CodeFirstAltairis
+
+PM> install-package EntityFramework
+You are downloading EntityFramework from Microsoft, the license agreement to which is available at http://go.microsoft.com/fwlink/?LinkID=211009. Check the package for additional dependencies, which may come with their own license agreement(s). Your use of the package and dependencies constitutes your acceptance of their license agreements. If you do not accept the license agreement(s), then delete the relevant components from your device.
+Successfully installed 'EntityFramework 4.1.10311.0'
+Successfully added 'EntityFramework 4.1.10311.0' to CodeFirstAltairis
+
+PM> install-package EntityFramework.SqlCompactEdition
+Install-Package : Unable to find package 'EntityFramework.SqlCompactEdition'
+At line:1 char:16
++ install-package <<<<  EntityFramework.SqlCompactEdition
+    + CategoryInfo          : NotSpecified: (:) [Install-Package], InvalidOperationException
+    + FullyQualifiedErrorId : NuGet.VisualStudio.Cmdlets.InstallPackageCmdlet
+ 
+
+PM> install-package EntityFramework.SqlCompact
+Install-Package : Unable to find package 'EntityFramework.SqlCompact'
+At line:1 char:16
++ install-package <<<<  EntityFramework.SqlCompact
+    + CategoryInfo          : NotSpecified: (:) [Install-Package], InvalidOperationException
+    + FullyQualifiedErrorId : NuGet.VisualStudio.Cmdlets.InstallPackageCmdlet
+ 
+
+PM> install-package EntityFramework.SqlServerCompact
+'SqlServerCompact (= 4.0.8482.1)' not installed. Attempting to retrieve dependency from source...
+Done
+'WebActivator (= 1.0.0.0)' not installed. Attempting to retrieve dependency from source...
+Done
+You are downloading SqlServerCompact from Microsoft, the license agreement to which is available at http://www.microsoft.com/web/webpi/eula/SQLCE_EULA_ENU.rtf. Check the package for additional dependencies, which may come with their own license agreement(s). Your use of the package and dependencies constitutes your acceptance of their license agreements. If you do not accept the license agreement(s), then delete the relevant components from your device.
+Successfully installed 'SqlServerCompact 4.0.8482.1'
+'EntityFramework 4.1.10311.0' already installed
+Successfully installed 'WebActivator 1.0.0.0'
+You are downloading EntityFramework.SqlServerCompact from Microsoft, the license agreement to which is available at http://173.203.67.148/licenses/SQLCE/EULA_ENU.rtf. Check the package for additional dependencies, which may come with their own license agreement(s). Your use of the package and dependencies constitutes your acceptance of their license agreements. If you do not accept the license agreement(s), then delete the relevant components from your device.
+Successfully installed 'EntityFramework.SqlServerCompact 4.1.8482.1'
+Successfully added 'SqlServerCompact 4.0.8482.1' to CodeFirstAltairis
+CodeFirstAltairis already has a reference to 'EntityFramework 4.1.10311.0'
+Successfully added 'WebActivator 1.0.0.0' to CodeFirstAltairis
+Successfully added 'EntityFramework.SqlServerCompact 4.1.8482.1' to CodeFirstAltairis
+
+PM> install-package MvcScaffolder
+Install-Package : Unable to find package 'MvcScaffolder'
+At line:1 char:16
++ install-package <<<<  MvcScaffolder
+    + CategoryInfo          : NotSpecified: (:) [Install-Package], InvalidOperationException
+    + FullyQualifiedErrorId : NuGet.VisualStudio.Cmdlets.InstallPackageCmdlet
+ 
+
+PM> install-package MvcScaffolding
+'T4Scaffolding (= 0.9.9)' not installed. Attempting to retrieve dependency from source...
+Done
+'EntityFramework 4.1.10311.0' already installed
+Successfully installed 'T4Scaffolding 0.9.9'
+Successfully installed 'MvcScaffolding 0.9.9'
+CodeFirstAltairis already has a reference to 'EntityFramework 4.1.10311.0'
+Successfully added 'T4Scaffolding 0.9.9' to CodeFirstAltairis
+Install-Package : Exception calling "Delete" with "0" argument(s): "The item 'InstallationDummyFile.txt' cannot be deleted."
+At line:1 char:16
++ install-package <<<<  MvcScaffolding
+    + CategoryInfo          : NotSpecified: (:) [Install-Package], CmdletInvocationException
+    + FullyQualifiedErrorId : NuGet.VisualStudio.Cmdlets.InstallPackageCmdlet
+ 
+
+PM> install-package MvcScaffolding
+'EntityFramework 4.1.10311.0' already installed
+'T4Scaffolding 0.9.9' already installed
+'MvcScaffolding 0.9.9' already installed
+CodeFirstAltairis already has a reference to 'EntityFramework 4.1.10311.0'
+CodeFirstAltairis already has a reference to 'T4Scaffolding 0.9.9'
+'InstallationDummyFile.txt' already exists. Skipping...
+Successfully added 'MvcScaffolding 0.9.9' to CodeFirstAltairis
+
+PM> Get-DefaultScaffolder
+
+DefaultName                                                                           ScaffolderName                                                                       
+-----------                                                                           --------------                                                                       
+Action                                                                                MvcScaffolding.Action                                                                
+Controller                                                                            MvcScaffolding.Controller                                                            
+UnitTest                                                                              MvcScaffolding.ActionUnitTest                                                        
+View                                                                                  MvcScaffolding.RazorView                                                             
+Views                                                                                 MvcScaffolding.Views                                                                 
+
+
+PM> scaffold Controller Role -Repository -Force
+Scaffolding RolesController...
+Invoke-Scaffolder : A parameter cannot be found that matches parameter name 'ModelType'.
+At c:\users\james\documents\visual studio 2010\projects\CodeFirstAltairis\packages\MvcScaffolding.0.9.9\tools\Controller\MvcScaffolding.Controller.ps1:64 char:33
++         Scaffold Repository -ModelType <<<<  $foundModelType.FullName -DbContextType $DbContextType -Area $Area -Project $Project -CodeLanguage $CodeLanguage -Force:$For
+ce -BlockUi
+    + CategoryInfo          : InvalidArgument: (:) [Invoke-Scaffolder], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,T4Scaffolding.Cmdlets.InvokeScaffolderCmdlet
+ 
+Added controller Controllers\RolesController.cs
+Added Create view at 'Views\Roles\Create.cshtml'
+Added Edit view at 'Views\Roles\Edit.cshtml'
+Added Delete view at 'Views\Roles\Delete.cshtml'
+Added Details view at 'Views\Roles\Details.cshtml'
+Added Index view at 'Views\Roles\Index.cshtml'
+Added _CreateOrEdit view at 'Views\Roles\_CreateOrEdit.cshtml'
+PM> uninstall-package MvcScaffolding
+Successfully removed 'MvcScaffolding 0.9.9' from CodeFirstAltairis
+Successfully uninstalled 'MvcScaffolding 0.9.9'
+
+
+PM> install-package MvcScaffolding
+'T4Scaffolding (= 0.9.9)' not installed. Attempting to retrieve dependency from source...
+Done
+'EntityFramework 4.1.10311.0' already installed
+Successfully installed 'T4Scaffolding 0.9.9'
+Successfully installed 'MvcScaffolding 0.9.9'
+CodeFirstAltairis already has a reference to 'EntityFramework 4.1.10311.0'
+Successfully added 'T4Scaffolding 0.9.9' to CodeFirstAltairis
+Successfully added 'MvcScaffolding 0.9.9' to CodeFirstAltairis
+
+PM> scaffold Controller Role -Repository -Force
+Scaffolding RolesController...
+Added database context 'Models\CodeFirstAltairisContext.cs'
+Added 'Roles' to database context 'CodeFirstAltairis.Models.CodeFirstAltairisContext'
+Added repository 'Models\RoleRepository.cs'
+Added controller Controllers\RolesController.cs
+Added Create view at 'Views\Roles\Create.cshtml'
+Added Edit view at 'Views\Roles\Edit.cshtml'
+Added Delete view at 'Views\Roles\Delete.cshtml'
+Added Details view at 'Views\Roles\Details.cshtml'
+Added Index view at 'Views\Roles\Index.cshtml'
+Added _CreateOrEdit view at 'Views\Roles\_CreateOrEdit.cshtml'
+PM>

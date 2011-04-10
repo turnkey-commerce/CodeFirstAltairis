@@ -1,0 +1,45 @@
+﻿@model CodeFirstAltairis.Models.User
+@using CodeFirstAltairis.Models;
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>User</legend>
+
+    <div class="display-label">User Name</div>
+    <div class="display-field">@Model.UserName</div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label">Comment</div>
+    <div class="display-field">@Model.Comment</div>
+
+    <div class="display-label">Approved?</div>
+    <div class="display-field">@Model.IsApproved</div>
+
+    <div class="display-label">Created On</div>
+    <div class="display-field">@String.Format("{0:g}", Model.DateCreated)</div>
+
+    <div class="display-label">Last Login</div>
+    <div class="display-field">@String.Format("{0:g}", Model.DateLastLogin)</div>
+
+
+    <div class="display-label">Last Password Change</div>
+    <div class="display-field">@String.Format("{0:g}", Model.DateLastPasswordChange)</div>
+
+    <div class="display-label">Roles</div>
+    @foreach (Role role in Model.Roles) {
+        @role.RoleName<br />
+    }
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.UserName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

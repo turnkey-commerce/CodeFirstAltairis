@@ -1,0 +1,20 @@
+@model CodeFirstAltairis.Models.Role
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Role</legend>
+
+    <div class="display-label">Users</div>
+    <div class="display-field">@(Model.Users == null ? "None" : Model.Users.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RoleName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

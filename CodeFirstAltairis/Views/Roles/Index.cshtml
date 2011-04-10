@@ -1,0 +1,37 @@
+@model IEnumerable<CodeFirstAltairis.Models.Role>
+
+@{
+    ViewBag.Title = "Roles";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>  
+        <th></th>
+        <th>Role</th>
+        <th>
+            # Users
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.RoleName })
+        </td>
+                <td>
+            @item.RoleName
+        </td>
+        <td>
+			@(item.Users == null ? "None" : item.Users.Count.ToString())
+        </td>
+    </tr>
+}
+
+</table>
+
+

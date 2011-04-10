@@ -1,0 +1,72 @@
+@model IEnumerable<CodeFirstAltairis.Models.User>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+    <tr>
+        <th></th>
+        <th>
+            User Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Comment
+        </th>
+        <th>
+            Approved?
+        </th>
+        <th>
+            Created On
+        </th>
+        <th>
+            Last Login
+        </th>
+        <th>
+            Last Password Change
+        </th>
+        <th>
+            # Roles
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.UserName }) | @Html.ActionLink("Add Role", "AddRole", new { id=item.UserName }) | @Html.ActionLink("Delete", "Delete", new { id=item.UserName })
+        </td>
+        <td>
+			@item.UserName
+        </td>
+        <td>
+			@item.Email
+        </td>
+        <td>
+			@item.Comment
+        </td>
+        <td>
+			@item.IsApproved
+        </td>
+        <td>
+			@String.Format("{0:g}", item.DateCreated)
+        </td>
+        <td>
+			@String.Format("{0:g}", item.DateLastLogin)
+        </td>
+        <td>
+			@String.Format("{0:g}", item.DateLastPasswordChange)
+        </td>
+        <td>
+			@(item.Roles == null ? "None" : item.Roles.Count.ToString())
+        </td>
+    </tr>
+}
+
+</table>
+
+

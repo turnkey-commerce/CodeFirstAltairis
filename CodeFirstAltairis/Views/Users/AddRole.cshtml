@@ -1,0 +1,55 @@
+﻿@model CodeFirstAltairis.Models.User
+@using CodeFirstAltairis.Models
+
+@{
+    ViewBag.Title = "AddRole";
+}
+
+<h2>AddRole</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>User</legend>
+
+        @Html.HiddenFor(model => model.UserName)
+
+        <div class="editor-label">
+            User Name:
+        </div>
+        <div class="editor-field">
+            @Model.UserName
+        </div>
+
+        <div class="editor-label">
+            Roles:
+        </div>
+        <div class="editor-field">
+            @foreach (var item in Model.Roles) {
+                @item.RoleName<br />
+            }
+        </div>
+
+        <div class="editor-label">
+            Select Role:
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("RoleName", ((IEnumerable<Role>)ViewBag.PossibleRoles).Select(option => new SelectListItem {
+           Text = (option == null ? "None" : option.RoleName),
+           Value = option.RoleName
+       }), "Choose...")
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
