@@ -27,8 +27,8 @@ namespace CodeFirstAltairis.Models
     }
 
     // Change the base class as follows if you want to drop and create the database during development:
-    // public class DBInitializer : DropCreateDatabaseIfModelChanges<ApplicationDB> 
-    public class DBInitializer : CreateDatabaseIfNotExists<ApplicationDB> 
+    public class DBInitializer : DropCreateDatabaseIfModelChanges<ApplicationDB> 
+    //public class DBInitializer : CreateDatabaseIfNotExists<ApplicationDB> 
     {
         protected override void Seed(ApplicationDB context) 
         {

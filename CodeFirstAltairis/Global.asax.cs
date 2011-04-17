@@ -33,6 +33,10 @@ namespace CodeFirstAltairis {
             // Initializes and seeds the database.
             Database.SetInitializer(new DBInitializer());
 
+            using (var context = new ApplicationDB()) {
+                context.Database.Initialize(force: true);
+            }
+
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }

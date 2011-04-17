@@ -43,6 +43,8 @@ namespace CodeFirstAltairis.Models {
         [Display(Name = "Last Password Change Date")]
         public DateTime DateLastPasswordChange { get; set; }
 
+        public string FullName { get; set; }
+
         public virtual ICollection<Role> Roles { get; set; }
 
     }
