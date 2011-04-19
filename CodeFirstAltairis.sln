@@ -5,7 +5,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstAltairis", "CodeFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstAltairis.Tests", "CodeFirstAltairis.Tests\CodeFirstAltairis.Tests.csproj", "{611BEFF0-196D-47AF-BB08-852F5C1AE6F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstSpecs", "CodeFirstSpecs\CodeFirstSpecs.csproj", "{F31BE842-788C-41DC-B5D7-A93441ECD313}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F52AB96-2FF4-4ECA-B558-9AC87885775C}"
+	ProjectSection(SolutionItems) = preProject
+		CodeFirstAltairis.vsmdi = CodeFirstAltairis.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = CodeFirstAltairis.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -19,6 +31,10 @@ Global
 		{611BEFF0-196D-47AF-BB08-852F5C1AE6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611BEFF0-196D-47AF-BB08-852F5C1AE6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611BEFF0-196D-47AF-BB08-852F5C1AE6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31BE842-788C-41DC-B5D7-A93441ECD313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31BE842-788C-41DC-B5D7-A93441ECD313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31BE842-788C-41DC-B5D7-A93441ECD313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31BE842-788C-41DC-B5D7-A93441ECD313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
