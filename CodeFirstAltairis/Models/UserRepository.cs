@@ -46,7 +46,9 @@ namespace CodeFirstAltairis.Models
         public void Delete(string id)
         {
             var user = context.Users.Find(id);
-            context.Users.Remove(user);
+            if (user != null) {
+                context.Users.Remove(user);
+            }
         }
 
         public void AddRole(string id, string roleName) {

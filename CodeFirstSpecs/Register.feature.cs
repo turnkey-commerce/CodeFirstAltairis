@@ -97,9 +97,9 @@ this.ScenarioSetup(scenarioInfo);
                         "Confirm password",
                         "password"});
 #line 13
- testRunner.And("I fill in the Form as follows", ((string)(null)), table1);
+ testRunner.When("I fill in the Form as follows", ((string)(null)), table1);
 #line 19
- testRunner.When("I click the Register button");
+ testRunner.And("I click the Register button");
 #line 20
  testRunner.Then("I am on the Home Page Logged In");
 #line hidden

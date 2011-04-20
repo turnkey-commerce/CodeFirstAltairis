@@ -6,10 +6,19 @@ using TechTalk.SpecFlow;
 using MVCStore.AcceptanceTest;
 using WatiN.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CodeFirstAltairis.Models;
 
 namespace CodeFirstSpecs {
     [Binding]
-    public class RegisterSteps {
+    public class RegisterSteps : Steps {
+
+        [BeforeScenario]
+        public void ScenarioSetup() {
+            ScenarioContext.Current["stepcount"] = 0;
+            UserRepository userRep = new UserRepository();
+            userRep.Delete("jack");
+            userRep.Save();
+        }
 
         [Given(@"I am on the Login Page")]
         public void GivenIAmOnTheLoginPage() {
@@ -29,11 +38,12 @@ namespace CodeFirstSpecs {
 
         [Given(@"I am on the Registration Page")]
         public void GivenIAmOnTheRegistrationPage() {
-            WebBrowser.Current.GoTo("http://localhost:57802/Account/Register");
-            WebBrowser.Current.BringToFront();
+            Given("I am on the Login Page");
+            When("I click Register");
+            incStepCount();
         }
 
-        [Given(@"I fill in the Form as follows")]
+        [When(@"I fill in the Form as follows")]
         public void GivenIFillInTheFormAsFollows(TechTalk.SpecFlow.Table table) {
             foreach (var row in table.Rows) {
                 var labelText = row["Label"];
@@ -50,6 +60,11 @@ namespace CodeFirstSpecs {
         [When(@"I click the Register button")]
         public void WhenIClickTheRegisterButton() {
             WebBrowser.Current.Button(Find.ByValue("Register")).Click();
+        }
+
+        private void incStepCount() {
+            int i = ((int)ScenarioContext.Current["stepcount"]);
+            ScenarioContext.Current["stepcount"] = ++i;
         }
     }
 }

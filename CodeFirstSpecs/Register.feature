@@ -10,11 +10,11 @@ Scenario: Go To Registration Page
 
 Scenario: Fill in Registration
 	Given I am on the Registration Page
-	And I fill in the Form as follows
+	When I fill in the Form as follows
 	   | Label            | Value                     |
        | User name        | jack                      |
        | Email address    | jack@user.com             |
 	   | Password         | password                  |
 	   | Confirm password | password                  |
-	When I click the Register button
+	And I click the Register button
 	Then I am on the Home Page Logged In
