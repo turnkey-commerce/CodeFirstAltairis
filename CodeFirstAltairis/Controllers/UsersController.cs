@@ -12,11 +12,6 @@ namespace CodeFirstAltairis.Controllers
 		private readonly IUserRepository userRepository;
         private readonly IRoleRepository roleRepository;
 
-		// If you are using Dependency Injection, you can delete the following constructor
-        public UsersController() : this(new UserRepository(), new RoleRepository())
-        {
-        }
-
         public UsersController(IUserRepository userRepository, IRoleRepository roleRepository)
         {
 			this.userRepository = userRepository;
